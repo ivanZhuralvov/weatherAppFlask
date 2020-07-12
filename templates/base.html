@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>{% block head %} {% endblock %}</title>
+</head>
+<body>
+    <div class="bg-dark d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal text-light">Weather app</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+
+          <a class="p-2 text-light" href="/">Main</a>
+          <a class="p-2 text-light" href="/weather">Weather</a>
+
+        </nav>
+          <a class="btn btn-warning" href="/about">About</a>
+
+    </div>
+
+
+    {% block body %} {% endblock %}
+    <footer class="container pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">Created by Ivan Zhuravlov</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="http://google.com">Cool stuff</a></li>
+              <li><a class="text-muted" href="http://google.com">Random feature</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="http://google.com">Resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="/team">Team</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

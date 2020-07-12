@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+Current weather
+{% endblock %}
+
+{% block body %} 
+
+<div class="container">
+    <h1 style="text-align: center;">Current Weather in {{data['list'][0]['name']}}</h1>
+    <h2>Temperature: {{data['list'][0]['main']['temp']}}</h2>
+    {% if data['list'][0]['main']['temp']>25 %}
+    <p style="margin-top: 1rem;">it is hot boyyy</p>
+    
+    {% endif %}
+    {% if data['list'][0]['main']['temp']>17 %}
+    <p>Enough comfortamble for me boyyy</p>
+    <small style="margin-bottom: 2rem;padding: 0;">p.s exelent day for riding longboard or bike</small>
+    {% endif %}
+    <p>Fells like: {{data['list'][0]['main']['feels_like']}}</p>
+    <p>{{data['list'][0]['weather'][0]['description']}}</p>
+</div>
+
+{% endblock %}

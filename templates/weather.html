@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+Get weather
+{% endblock %}
+
+{% block body %} 
+
+<div class="container">
+    <h1 style="text-align: center;">Weather</h1>
+    <small>There are a lot of different cities et. London, Kiev, Moscow</small>
+    <form method="POST" style="margin-top: 1rem;">
+        <input type="text" class="form-control" placeholder="Enter the city name" name="city_name" id="city_name" >
+        <input type="submit" value="Enter" class="btn btn-success" style="margin-top: 1rem;">
+    </form>
+</div>
+
+{% endblock %}
